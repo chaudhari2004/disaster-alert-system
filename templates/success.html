@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Emergency Submitted</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(
+                135deg,
+                #0f172a,
+                #1e293b,
+                #334155
+            );
+            color: white;
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+        .container{
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+        }
+
+        h1{
+            text-align: center;
+            color: #22c55e;
+            margin-bottom: 10px;
+        }
+
+        p{
+            text-align: center;
+            color: #ddd;
+            margin-bottom: 35px;
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        th{
+            background: #1e293b;
+            padding: 15px;
+            color: white;
+        }
+
+        td{
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        img{
+            width: 180px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .status{
+            background: rgba(34,197,94,0.15);
+            color: #22c55e;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .btn{
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            background: #dc2626;
+            color: white;
+            padding: 14px 24px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover{
+            background: red;
+        }
+
+        .center{
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+            ✅ Emergency Request Submitted
+        </h1>
+
+        <p>
+            Your SOS request has been successfully sent to the Disaster Management Team.
+        </p>
+
+        <table>
+
+            <tr>
+
+                <th>Request ID</th>
+
+                <th>Name</th>
+
+                <th>Location</th>
+
+                <th>Emergency</th>
+
+                <th>Image</th>
+
+                <th>Status</th>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    {{ request_id }}
+                </td>
+
+                <td>
+                    {{ name }}
+                </td>
+
+                <td>
+                    {{ location }}
+                </td>
+
+                <td>
+                    {{ emergency }}
+                </td>
+
+                <td>
+
+                    <img src="{{ image_url }}">
+
+                </td>
+
+                <td>
+
+                    <span class="status">
+                        {{ status }}
+                    </span>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+        <div class="center">
+
+            <a href="/"
+               class="btn">
+
+                Back to Home
+
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Emergency SOS Request</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background: linear-gradient(
+                135deg,
+                #0f2027,
+                #203a43,
+                #2c5364
+            );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            width: 500px;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+            color: white;
+        }
+
+        .title{
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .title h1{
+            font-size: 34px;
+            margin-bottom: 10px;
+            color: #ff4d4d;
+        }
+
+        .title p{
+            color: #ddd;
+            font-size: 15px;
+        }
+
+        label{
+            display: block;
+            margin-bottom: 8px;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        input{
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input[type="file"]{
+            background: white;
+            color: black;
+            padding: 10px;
+        }
+
+        .submit-btn{
+            width: 100%;
+            margin-top: 35px;
+            padding: 15px;
+            background: linear-gradient(
+                to right,
+                #ff416c,
+                #ff4b2b
+            );
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover{
+            transform: scale(1.03);
+            box-shadow: 0px 0px 15px rgba(255,75,43,0.7);
+        }
+
+        .back-btn{
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            text-decoration: none;
+            color: white;
+            padding: 12px;
+            border: 1px solid white;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover{
+            background: white;
+            color: black;
+        }
+
+        .footer{
+            margin-top: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: #ccc;
+        }
+
+        .icon{
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="title">
+
+            <div class="icon">
+                🚨
+            </div>
+
+            <h1>
+                SOS Emergency Alert
+            </h1>
+
+            <p>
+                Cloud-Based Disaster Alert & Rescue Management System
+            </p>
+
+        </div>
+
+        <form method="POST"
+              enctype="multipart/form-data">
+
+            <label>
+                Full Name
+            </label>
+
+            <input type="text"
+                   name="name"
+                   placeholder="Enter Your Full Name"
+                   required>
+
+            <label>
+                Current Location
+            </label>
+
+            <input type="text"
+                   name="location"
+                   placeholder="Enter Current Disaster Location"
+                   required>
+
+            <label>
+                Emergency Type
+            </label>
+
+            <input type="text"
+                   name="emergency"
+                   placeholder="Flood / Fire / Earthquake / Cyclone"
+                   required>
+
+            <label>
+                Upload Disaster Image
+            </label>
+
+            <input type="file"
+                   name="image"
+                   required>
+
+            <button type="submit"
+                    class="submit-btn">
+
+                Send Emergency SOS
+
+            </button>
+
+        </form>
+
+        <a href="/"
+           class="back-btn">
+
+            ⬅ Back to Home
+
+        </a>
+
+        <div class="footer">
+
+            Real-Time Emergency Monitoring & Rescue Coordination System
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
